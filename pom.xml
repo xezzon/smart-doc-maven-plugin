@@ -6,7 +6,7 @@
 
     <groupId>io.github.xezzon</groupId>
     <artifactId>smart-doc-maven-plugin</artifactId>
-    <version>3.0.5</version>
+    <version>3.0.5-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>smart-doc-maven-plugin</name>
@@ -37,6 +37,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.pluging.version>3.8.6</maven.pluging.version>
         <maven.pluging.annotations.version>3.8.2</maven.pluging.annotations.version>
+        <maven.reporting.version>3.1.0</maven.reporting.version>
+        <maven.reporting.impl.version>3.1.0</maven.reporting.impl.version>
     </properties>
     <dependencies>
         <dependency>
@@ -68,6 +70,16 @@
             <groupId>org.apache.maven.shared</groupId>
             <artifactId>maven-dependency-tree</artifactId>
             <version>3.2.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.reporting</groupId>
+            <artifactId>maven-reporting-api</artifactId>
+            <version>${maven.reporting.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.maven.reporting</groupId>
+            <artifactId>maven-reporting-impl</artifactId>
+            <version>${maven.reporting.impl.version}</version>
         </dependency>
         <dependency>
             <groupId>com.ly.smart-doc</groupId>

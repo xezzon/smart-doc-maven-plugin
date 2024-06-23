@@ -33,7 +33,7 @@ public interface GlobalConstants {
 
     String SOURCE_CODE_PATH = "src/main/java";
 
-    String TARGET_OUT_PATH = "target/doc";
+    String TARGET_OUT_PATH = "smart-doc";
 
     String POM_XML = "pom.xml";
 
