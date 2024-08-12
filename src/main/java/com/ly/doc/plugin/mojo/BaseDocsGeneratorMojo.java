@@ -53,6 +53,7 @@ import java.util.Enumeration;
 import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Optional;
 import java.util.Set;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
@@ -538,7 +539,7 @@ public abstract class BaseDocsGeneratorMojo extends AbstractMojo {
         apiConfig.setClassLoader(ClassLoaderUtil.getRuntimeClassLoader(project));
         apiConfig.setServerUrl(serverUrl);
         apiConfig.setServerEnv(serverEnv);
-        apiConfig.setPathPrefix(pathPrefix);
+        apiConfig.setPathPrefix(Optional.ofNullable(pathPrefix).orElseGet(String::new));
         apiConfig.setAllInOne(allInOne);
         apiConfig.setCoverOld(coverOld);
         apiConfig.setCreateDebugPage(createDebugPage);
