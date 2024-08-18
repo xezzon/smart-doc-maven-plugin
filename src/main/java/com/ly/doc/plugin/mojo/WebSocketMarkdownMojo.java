@@ -1,7 +1,7 @@
 /*
  * smart-doc
  *
- * Copyright (C) 2018-2023 smart-doc
+ * Copyright (C) 2018-2024 smart-doc
  *
  * Licensed to the Apache Software Foundation (ASF) under one
  * or more contributor license agreements.  See the NOTICE file
@@ -35,6 +35,7 @@ import org.apache.maven.plugins.annotations.ResolutionScope;
  * websocket Markdown
  *
  * @author linwumingshi
+ * @since 3.0.3
  */
 @Execute(phase = LifecyclePhase.COMPILE)
 @Mojo(name = MojoConstants.WEBSOCKET_MARKDOWN_MOJO, requiresDependencyResolution = ResolutionScope.COMPILE)
