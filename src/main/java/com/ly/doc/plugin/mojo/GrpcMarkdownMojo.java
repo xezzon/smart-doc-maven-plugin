@@ -43,13 +43,6 @@ public class GrpcMarkdownMojo extends BaseDocsGeneratorMojo {
 
     @Override
     public void executeMojo(ApiConfig apiConfig, JavaProjectBuilder javaProjectBuilder) {
-        try {
-            GrpcMarkdownBuilder.buildApiDoc(apiConfig, javaProjectBuilder);
-        } catch (Throwable e) {
-            getLog().error(e);
-            if (apiConfig.isStrict()) {
-                throw new RuntimeException(e.getMessage());
-            }
-        }
+        GrpcMarkdownBuilder.buildApiDoc(apiConfig, javaProjectBuilder);
     }
 }

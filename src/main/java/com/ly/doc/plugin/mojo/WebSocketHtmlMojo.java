@@ -44,14 +44,7 @@ import org.apache.maven.plugins.annotations.ResolutionScope;
 public class WebSocketHtmlMojo extends BaseDocsGeneratorMojo {
 
     @Override
-    public void executeMojo(ApiConfig apiConfig, JavaProjectBuilder javaProjectBuilder) throws MojoExecutionException, MojoFailureException {
-        try {
-            WebSocketHtmlBuilder.buildApiDoc(apiConfig, javaProjectBuilder);
-        } catch (Exception e) {
-            getLog().error(e);
-            if (apiConfig.isStrict()) {
-                throw new RuntimeException(e.getMessage());
-            }
-        }
+    public void executeMojo(ApiConfig apiConfig, JavaProjectBuilder javaProjectBuilder) {
+        WebSocketHtmlBuilder.buildApiDoc(apiConfig, javaProjectBuilder);
     }
 }
